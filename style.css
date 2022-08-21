@@ -89,6 +89,13 @@ body {
     transform: scale(1);
 }
 
+@media (max-width: 1024px) {
+    .slider-4 .slick-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* === Slider Five styles -> Control-slider(Pause/Play) */
 .control-slider {
     width: 400px;
