@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Basic styles */
+body {
+    background-color: #bbb;
+}
+.container {
+    width: 75%;
+    margin: 100px auto;
+}
+.container h2 {
+    font-family: cursive;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+.slider img {
+    width: 100%;
+    padding: 0 10px;
+}
+.slider .slick-prev {
+    margin-left: -2rem;
+}
+.slider .slick-next {
+    margin-right: -2rem;
+}
+.slick-prev:before,
+.slick-next:before {
+    font-size: 25px;
+    line-height: 1;
+    color: #000;
+}
+.slider .slick-dots li button:before {
+    font-size: 10px;
+    line-height: 30px;
+}
+
+@media (max-width: 768px) {
+    .slider .slick-prev,.slider .slick-next {
+        margin: 0;
+    }
+}
+
+/* === Slider Two styles */
+.slider-2 .slick-prev:before {
+    content: "<";
+    font-size: 32px;
+}
+.slider-2 .slick-next:before {
+    content: ">";
+    font-size: 32px;
+}
+.slider-2 .slick-dots li button:before {
+    content: '■';
+    font-size: 15px;
+}
+
+/* === Slider Three styles */
+.slider-3 .slick-prev:before {
+    content: "◁";
+    font-size: 30px;
+}
+.slider-3 .slick-next:before {
+    content: "▷";
+    font-size: 30px;
+}
+.slider-3 .slick-dots li button:before {
+    content: '▲';
+    font-size: 20px;
+}
+
+/* === Slider Four styles */
+.slider-4 .slick-slide {
+    opacity: .6;
+    transform: scale(.6);
+    transition: .4s linear;
+    padding: 1rem 0;
+}
+.slider-4 .slick-active {
+    opacity: .8;
+    transform: scale(.8);
+}
+.slider-4 .slick-center {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* === Slider Five styles -> Control-slider(Pause/Play) */
+.control-slider {
+    width: 400px;
+    height: 70px;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ccc;
+}
+.control-slider h3 {
+    font-family: cursive;
+    color: #333;
+    border-right: 2px solid goldenrod;
+    padding-right: .5rem;
+}
+.control-slider button {
+    background-color: #333;
+    color: gold;
+    padding: 8px 12px;
+    margin: .5rem;
+    font-family: cursive;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.control-slider button:hover {
+    color: #fff;
+}
+.control-slider .btn-active {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .control-slider {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 5rem 0;
+    }
+}
+@media (max-width: 425px) {
+    .control-slider {
+        width: 300px;
+    }
+    .control-slider h3 {
+        font-size: 14px;
+    }
+    .control-slider button {
+        font-size: 12px;
+    }
+}
+
+/* === Slider Six styles -> Append arrows&dots */
+.slider-6 img {
+    border-radius: 6rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.navigation-arrows,.navigation-dots {
+    width: 320px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 6rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.navigation .navigation-arrows .slick-prev {
+    left: 20px;
+}
+.navigation .navigation-arrows .slick-next {
+    right: 20px;
+}
+.navigation .navigation-arrows .slick-prev:before,
+.navigation .navigation-arrows .slick-next:before {
+    font-size: 22px;
+}
+
+.navigation .navigation-dots {
+    width: 200px;
+}
+.navigation .navigation-dots .slick-dots {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    top: 1px;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+.navigation .navigation-dots .slick-dots li button:before {
+    font-size: 8px;
+}
+
+@media (max-width: 768px) {
+    .navigation .navigation-arrows {
+        width: 300px;
+    }
+    .navigation .navigation-dots {
+        width: 180px;
+    }
+    .navigation .navigation-dots .slick-dots li {
+        width: 12px;
+    }
+}
+
+/* === Slider Seven styles -> Custom-arrows */
+.slider-7 .slick-slide img {
+    border-radius: 50px;
+}
+.custom_arrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+}
+.custom_arrows--btn {
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    font-family: cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.custom_arrows--btn.slick-disabled {
+    opacity: .2;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.2);
+}
+.custom_arrows--btn:active:not(.slick-disabled) {
+    background-color: #59CE8F;
+    opacity: .5;
+}
+
+@media (max-width: 425px) {
+    .custom_arrows--btn {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* === Slider Eight styles -> Verticl-mode */
+.container-slider__vertical {
+    position: relative;
+}
+
+.navigation-vertical {
+    width: 70%;
+    justify-content: space-between;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.navigation-vertical .navigation-dots{
+    width: 50px;
+    height: 300px;
+    position: relative;
+}
+.navigation-vertical .navigation-dots .slick-dots {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.navigation-vertical .navigation-arrows {
+    width: 60px;
+    height: 150px;
+    position: relative;
+}
+.navigation-vertical .navigation-arrows button {
+    margin: 0 12px;
+    top: 45%;
+}
+.navigation-vertical .navigation-arrows .slick-prev::before{
+    content: "\21BE";
+    font-size: 40px;
+}
+.navigation-vertical .navigation-arrows .slick-next::before{
+    content: "\21C2";
+    font-size: 40px;
+}
+
+.slider-8 {
+    width: 50%;
+    margin: auto;
+}
+.slider-8 img{
+    padding: 10px 0;
+}
+
+@media (max-width:1023px) {
+    .container-slider__vertical {
+        width: 90%;
+    }    
+    .container-slider__vertical h2 {
+        padding-bottom: 25rem;
+    }
+    .navigation-vertical .navigation-dots {
+        width: 40px;
+        height: 200px;
+    }
+    .navigation-vertical .navigation-arrows {
+        width: 40px;
+    }
+    .navigation-vertical .navigation-arrows button {
+        margin: 0;
+    }
+    .slider-8 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+@media (max-width: 768px) {
+    .navigation-vertical {
+        width: 100%;
+    }
+    .navigation-vertical .navigation-dots{
+        display: none;
+    }
+    .slider-8 {
+        width: 65%;
+    }
+}
+@media (max-width: 425px) {
+    .navigation-vertical .navigation-arrows {
+        width: 35px;
+        height: 80px;
+    }
+    .navigation .navigation-arrows .slick-prev {
+        left: 15px;
+    }
+    .navigation .navigation-arrows .slick-next {
+        right: 15px;
+    }
+    .navigation-vertical .navigation-arrows .slick-prev::before,
+    .navigation-vertical .navigation-arrows .slick-next::before {
+        font-size: 30px;
+    }
+}
