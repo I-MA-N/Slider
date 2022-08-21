@@ -30,15 +30,15 @@ $(document).ready(function(){
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 1,
-                centerPadding: '200px'
+                slidesToShow: 2,
+                centerMode: false
               }
             },
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 2,
-                centerPadding: '300px'
+                slidesToShow: 1,
+                centerMode: false
               }
             }
           ]
